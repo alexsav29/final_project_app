@@ -1,5 +1,8 @@
 import './App.css'
+import { Header } from './Layout/components/Header'
 
 export const App = () => {
-    return <h2>App</h2>
+    return <>
+        <Header />
+    </>
 }

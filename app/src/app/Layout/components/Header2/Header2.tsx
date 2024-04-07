@@ -1,6 +1,6 @@
-import './Header.css'
+import './Header2.css'
 
-export const Header = () => {
+export const Header2 = () => {
     return <>
         <header className="header">
             
@@ -17,11 +17,6 @@ export const Header = () => {
                                 <div className="lang">Eng</div>
                                 <div className="currency">USD</div>
                             </div>    
-                            <div className="auth">
-                                <p className="sign_in">Sign In</p>
-                                <p className="slash">/</p>
-                                <p className="sign_up">Sign Up</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -37,19 +32,14 @@ export const Header = () => {
                             </div>
                             <button className="search__btn btn">Search</button>
                         </div>
-                        <div className="order__container">
-                            <div className="wishlist">
-                                <div className="wishlist__wrapper"></div>
-                            </div>
-                            <div className="cart">
-                                <div className="cart__ico">
-                                    <div className="cart__ico__badge">2</div>
+                        <div className="header__phone">
+                            <a href="tel:+1 (219) 555-0114">
+                                <div className="phone__ico"></div>
+                                <div className="phone__info">
+                                    <p className="phone__text">Customer Services</p>
+                                    <p className="phone__number">+1 (219) 555-0114</p>
                                 </div>
-                                <div className="cart__info">
-                                    <div className="cart__info__text">Shopping cart:</div>
-                                    <div className="cart__info__total_price">$57.00</div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -57,6 +47,8 @@ export const Header = () => {
                     <div className="container">
                         <div className="header__nav">
                             <nav className="nav">
+                                <div className='menu__burger'><a href="#"><div className="menu__burger__ico"></div></a></div>
+                                <div className='categories'><a href="#">All Categories</a></div>
                                 <ul className='nav__items'>
                                     <li className='nav__item'><a className='active' href="#">Home</a></li>
                                     <li className='nav__item'><a href="#">Shop</a></li>
@@ -67,11 +59,16 @@ export const Header = () => {
                                 </ul>
                             </nav>
                         </div>
-                        <div className="header__phone">
-                            <a href="tel:+1 (219) 555-0114">
-                                <div className="phone__ico"></div>
-                                <p className="phone__number">+1 (219) 555-0114</p>
-                            </a>
+                        <div className="order__container">
+                            <div className="wishlist">
+                                <div className="wishlist__wrapper"></div>
+                            </div>
+                            <div className="cart">
+                                <div className="cart__ico">
+                                    <div className="cart__ico__badge">2</div>
+                                </div>
+                            </div>
+                            <div className="auth"></div>
                         </div>
                     </div>
                 </div>
@@ -79,3 +76,22 @@ export const Header = () => {
         </header>
     </>
 }
+
+
+
+
+
+<div className="order__container">
+    <div className="wishlist">
+        <div className="wishlist__wrapper"></div>
+    </div>
+    <div className="cart">
+        <div className="cart__ico">
+            <div className="cart__ico__badge">2</div>
+        </div>
+        <div className="cart__info">
+            <div className="cart__info__text">Shopping cart:</div>
+            <div className="cart__info__total_price">$57.00</div>
+        </div>
+    </div>
+</div>

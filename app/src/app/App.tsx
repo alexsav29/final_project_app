@@ -1,10 +1,8 @@
 import './App.css'
-// import { Header } from './Layout/components/Header'
-import { Header2 } from './Layout/components/Header2'
+import { Header3 } from './Layout/components/Header3'
 
 export const App = () => {
     return <>
-        <Header2 />
-        {/* <Header /> */}
+        <Header3 />
     </>
 }

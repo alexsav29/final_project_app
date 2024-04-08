@@ -226,10 +226,9 @@ a {
 }
 
 .header__nav .nav .categories {
-    display: flex;
-    justify-content: space-between;
     width: 248px;
     font-size: 16px;
+    font-weight: 500;
     box-sizing: border-box;
     padding: 20px 24px 20px 16px;
 }
@@ -239,7 +238,12 @@ a {
     background-color: var(--gray-8);
 }
 
-.header__nav .nav .categories::after {
+.header__nav .nav .categories a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav .nav .categories a::after {
     content: url('../../../../../public/icon/Navigation2/arrow_down_categories_ico.png');
     position: relative;
     top: 3px;
@@ -251,7 +255,7 @@ a {
     list-style: none;
     font-size: 14px;
     color: var(--gray-4);
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .header__nav .nav .nav__item {

@@ -53,11 +53,14 @@ a {
 
 .header__top {
     font-size: 12px;
-    color: var(--gray-6);
+    color: var(--white);
     font-weight: 400;
     padding: 12px 0;
-    border-bottom: 1px solid var(--gray-1);
-    background-color: var(--white);
+    background-color: var(--primary);
+}
+
+.header__top a {
+    color: var(--white);
 }
 
 .header__top .container {
@@ -78,7 +81,7 @@ a {
     display: inline-block;
     width: 16px;
     height: 19px;
-    background: url('../../../../../public/icon/Navigation1/map_pin_ico.png') no-repeat;
+    background: url('../../../../../public/icon/Navigation3/map_pin_ico-white.png') no-repeat;
 }
 
 .header__top__right {
@@ -99,7 +102,7 @@ a {
 .localization .lang::after,
 .localization .currency::after {
     margin-left: 6px;
-    content: url('../../../../../public/icon/Navigation1/arrow_localization_ico.png');
+    content: url('../../../../../public/icon/Navigation3/arrow_localization_ico-white.png');
 }
 
 .header__top__right .auth {
@@ -240,55 +243,101 @@ a {
 }
 
 .header__bot {
-    background-color: var(--gray-8);
-}
-
-.header__nav .nav .nav__items {
-    display: flex;
-    list-style: none;
-    font-size: 14px;
-    color: var(--gray-4);
-    font-weight: 500;
-}
-
-.nav .nav__item:not(:last-child) {
-    margin-right: 35.5px;
-}
-
-.nav .nav__item:nth-child(1),
-.nav .nav__item:nth-child(2),
-.nav .nav__item:nth-child(3),
-.nav .nav__item:nth-child(4) {
-    display: flex;
-    align-items: center;
-}
-
-.nav .nav__item:nth-child(1) a::after,
-.nav .nav__item:nth-child(2) a::after,
-.nav .nav__item:nth-child(3) a::after,
-.nav .nav__item:nth-child(4) a::after {
-    content: url('../../../../../public/icon/Navigation1/arrow_nav_ico.png');
-    margin-left: 8px;
-    position: relative;
-    top: 0;
-}
-
-.nav .nav__item a {
-    display: inline-block;
-    padding: 20px 0;
-}
-
-.nav .nav__item a.active {
-    color: var(--white);
-}
-
-.nav .nav__item a.active::after {
-    content: url('../../../../../public/icon/Navigation1/arrow_active_nav_ico.png');
+    background-color: var(--gray-05);
 }
 
 .header__bot .container {
     display: flex;
     justify-content: space-between;
+}
+
+.header__nav .nav {
+    display: flex;
+}
+
+.header__bot .burger__categories {
+    display: flex;
+    gap: 8px;
+    background-color: var(--primary);
+    padding: 0 24px;
+}
+
+.header__nav .nav .menu__burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__nav .nav .menu__burger__ico {
+    width: 32px;
+    height: 32px;
+    background: url('../../../../../public/icon/Navigation3/menu_burger.png') no-repeat center;
+}
+
+.header__nav .nav .categories {
+    width: 138px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+
+.header__nav .nav .categories a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--white);
+}
+
+.header__nav .nav .categories a::after {
+    content: url('../../../../../public/icon/Navigation3/arrow_down_categories_ico.png');
+    position: relative;
+    top: 3px;
+}
+
+.header__nav .nav .nav__items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 14px;
+    color: var(--gray-5);
+    font-weight: 500;
+}
+
+.header__nav .nav .nav__item {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 100%;
+}
+
+.header__nav .nav .nav__item:hover {
+    background-color: var(--soft-primary);
+}
+
+.header__nav .nav .nav__item:nth-child(1) a::after,
+.header__nav .nav .nav__item:nth-child(2) a::after,
+.header__nav .nav .nav__item:nth-child(3) a::after,
+.header__nav .nav .nav__item:nth-child(4) a::after {
+    content: url('../../../../../public/icon/Navigation1/arrow_nav_ico.png');
+    margin-left: 8px;
+    position: relative;
+    top: -2px;
+}
+
+.header__nav .nav .nav__item a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: var(--gray-5);
+}
+
+.header__nav .nav .nav__item a.active {
+    color: var(--primary);
+}
+
+.header__nav .nav .nav__item a.active::after {
+    content: url('../../../../../public/icon/Navigation3/arrow_down_ico-green.png');
 }
 
 .header__bot .header__phone {
@@ -304,11 +353,11 @@ a {
 .header__bot .header__phone .phone__ico {
     width: 28px;
     height: 28px;
-    background: url('../../../../../public/icon/Navigation1/phone_ico.png') no-repeat;
+    background: url('../../../../../public/icon/Navigation3/phone_ico-black.png') no-repeat;
     margin-right: 8px;
 }
 
 .header__bot .header__phone .phone__number {
-    color: var(--white);
+    color: var(--gray-9);
     font-weight: 500;
 }

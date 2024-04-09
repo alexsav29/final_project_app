@@ -1,0 +1,114 @@
+:root {
+    /* COLOR */
+        /* Common */
+            --soft-primary: #84D187;
+            --primary: #00B307;
+            --hard-primary: #2C742F;
+            --warning: #FF8A00;
+            --danger: #EA4B48;
+            --white: #FFFFFF;
+
+        /* Gray */
+            --gray-9: #1A1A1A;
+            --gray-8: #333333;
+            --gray-7: #4D4D4D;
+            --gray-6: #666666;
+            --gray-5: #808080;
+            --gray-4: #999999;
+            --gray-3: #B3B3B3;
+            --gray-2: #CCCCCC;
+            --gray-1: #E6E6E6;
+            --gray-05: #F2F2F2;
+
+        /* Green Gray */
+            --green-gray-9: #002603;
+            --green-gray-8: #173B1A;
+            --green-gray-7: #2B572E;
+            --green-gray-6: #406B42;
+            --green-gray-5: #618062;
+            --green-gray-4: #7A997C;
+            --green-gray-3: #96B397;
+            --green-gray-2: #B4CCB4;
+            --green-gray-1: #DAE6DA;
+            --green-gray-05: #EDF2EE;
+/* -------------------------------------- */
+}
+
+.btn {
+    border-radius: 43px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.arrow::after {
+    content: url(../../../../../public/icon/Button/arrow_btn_ico.png);
+}
+
+.small {
+    font-size: 12px;
+    padding: 10px 24px;
+}
+
+.small.arrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.medium {
+    font-size: 14px;
+    padding: 14px 32px;
+}
+
+.medium.arrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.large {
+    font-size: 16px;
+    padding: 16px 40px;
+}
+
+.large.arrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.fill {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.fill:hover {
+    background-color: var(--hard-primary);
+    color: var(--white);
+}
+
+.border {
+    border: 2px solid var(--primary);
+    background-color: var(--white);
+}
+
+.border:hover {
+    border: 2px solid var(--hard-primary);
+}
+
+.border, .ghost {
+    color: var(--primary);
+}
+
+.border:hover, 
+.ghost:hover {
+    color: var(--hard-primary);
+}
+
+.ghost {
+    background-color: var(#56AC591A);
+}
+
+.ghost:hover {
+    background-color: var(#2C742F33);
+}

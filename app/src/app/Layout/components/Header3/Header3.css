@@ -35,7 +35,7 @@
 }
 
 a {
-    color: #666666;
+    color: var(--gray-6);
     text-decoration: none;
 }
 

@@ -1,8 +1,8 @@
 import './App.css'
-import { Header3 } from './Layout/components/Header3'
+import { Header4 } from './Layout/components/Header4'
 
 export const App = () => {
     return <>
-        <Header3 />
+        <Header4 />
     </>
 }

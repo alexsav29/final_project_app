@@ -1,14 +1,17 @@
 import { Button } from '../Button'
-import './Footer.css'
+import './Footer2.css'
 
-export const Footer = () => {
+export const Footer2 = () => {
     return <>
         <footer className="footer">
             <div className="footer__subscribe">
                 <div className="container">
                     <div className="subscribe__text">
-                        <h2 className="subscribe__text__title">Subcribe our Newsletter</h2>
-                        <p className="subscribe__text__description">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
+                        <div className="subscribe__mail__ico"></div>
+                        <div className="subscribe__text__container">
+                            <h2 className="subscribe__text__title">Subcribe our Newsletter</h2>
+                            <p className="subscribe__text__description">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
+                        </div>
                     </div>
                     <div className="subscribe__info">
                         <div className="subscribe__input__container">
@@ -38,7 +41,7 @@ export const Footer = () => {
                     </div>
                     <ul className="footer__pages__items">
                         <li className="footer__pages__item">
-                            <a href="qwerty">My Account</a>
+                            <a href="#">My Account</a>
                             <ul className="footer__pages__subitems">
                                 <li className="footer__pages__subitem"><a href="#">My Account</a></li>
                                 <li className="footer__pages__subitem"><a href="#">Order History</a></li>
@@ -65,12 +68,10 @@ export const Footer = () => {
                             </ul>
                         </li>
                         <li className="footer__pages__item">
-                            <a href="#">Categories</a>
+                            <a href="#">Download Mobile App</a>
                             <ul className="footer__pages__subitems">
-                                <li className="footer__pages__subitem"><a href="#">Fruit & Vegetables</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Meat & Fish</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Bread & Bakery</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Beauty & Health</a></li>
+                                <li className="footer__pages__subitem applestore__ico"><a href="#"></a></li>
+                                <li className="footer__pages__subitem googleplay__ico"><a href="#"></a></li>
                             </ul>
                         </li>
                     </ul>

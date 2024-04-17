@@ -1,8 +1,8 @@
 import './App.css'
-import { Footer } from './Layout/components/Footer'
+import { Footer2 } from './Layout/components/Footer2'
 
 export const App = () => {
     return <>
-        <Footer />
+        <Footer2 />
     </>
 }

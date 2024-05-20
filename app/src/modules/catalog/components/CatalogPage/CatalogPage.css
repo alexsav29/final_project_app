@@ -1,0 +1,33 @@
+.product__item__title {
+    color: #000;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0 25px 0;
+}
+
+.product__imgs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product__images__list {
+    border: 2px solid #00B307;
+    padding: 20px;
+}
+
+.ant-image {
+    display: flex;
+    /* width: 150px; */
+    cursor: pointer;
+    width: 33.33%;
+}
+
+.product__buttons {
+    display: flex;
+}
+
+.product__buttons * {
+    margin: 20px 5px;
+}

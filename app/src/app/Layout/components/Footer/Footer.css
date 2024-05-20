@@ -227,9 +227,14 @@ p {
     display: flex;
 }
 
-.footer__pages .footer__pages__item > a {
+/* .footer__pages .footer__pages__item > a {
     display: inline-block;
     margin-bottom: 20px;
+} */
+
+.footer__pages .footer__pages__item > p {
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .footer__pages .footer__pages__item:nth-child(1) {

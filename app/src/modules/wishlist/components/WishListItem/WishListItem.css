@@ -1,0 +1,16 @@
+.add__to-wishlist__btn {
+    width: 40px;
+    height: 40px;
+    background-image: url('../../../../../public/icon/Main/add_to_wishlist_ico.svg');
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.add__to-wishlist__btn:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.add__to-wishlist__btn.favourite__product {
+    background: url('../../../../../public/icon/Main/add_to_wishlist_ico-active.svg');
+}

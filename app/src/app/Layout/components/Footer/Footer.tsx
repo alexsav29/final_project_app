@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Button } from '../Button'
 import './Footer.css'
 
@@ -16,10 +17,10 @@ export const Footer = () => {
                             <Button size='large' type='fill'>Subscribe</Button>
                         </div>
                         <div className="subscribe__social">
-                            <div className="facebook__ico"><a href="#"></a></div>
-                            <div className="twitter__ico"><a href="#"></a></div>
-                            <div className="pinterest__ico"><a href="#"></a></div>
-                            <div className="instagram__ico"><a href="#"></a></div>
+                            <div className="facebook__ico"><Link to="https://www.facebook.com/" target='_blank'></Link></div>
+                            <div className="twitter__ico"><Link to="https://x.com/" target='_blank'></Link></div>
+                            <div className="pinterest__ico"><Link to="https://www.pinterest.com/" target='_blank'></Link></div>
+                            <div className="instagram__ico"><Link to="https://www.instagram.com/" target='_blank'></Link></div>
                         </div>
                     </div>
 
@@ -28,7 +29,7 @@ export const Footer = () => {
             <div className="footer__pages">
                 <div className="container">
                     <div className="footer__pages__info">
-                        <div className="footer__logo"><a href="#"></a></div>
+                        <div className="footer__logo"><Link to="/"></Link></div>
                         <p className="footer__description">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
                         <div className="footer__info">
                             <a href='tel:+1(219)555-0114' className="footer__phone">+1 (219) 555-0114</a>
@@ -38,39 +39,43 @@ export const Footer = () => {
                     </div>
                     <ul className="footer__pages__items">
                         <li className="footer__pages__item">
-                            <a href="qwerty">My Account</a>
+                            {/* <a href="qwerty">My Account</a> */}
+                            <p>My Account</p>
                             <ul className="footer__pages__subitems">
-                                <li className="footer__pages__subitem"><a href="#">My Account</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Order History</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Shoping Cart</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Wishlist</a></li>
+                                <li className="footer__pages__subitem"><Link to="/account">My Account</Link></li>
+                                <li className="footer__pages__subitem"><Link to="/history">Order History</Link></li>
+                                <li className="footer__pages__subitem"><Link to="/cart">Shoping Cart</Link></li>
+                                <li className="footer__pages__subitem"><Link to="/wishlist">Wishlist</Link></li>
                             </ul>
                         </li>
                         <li className="footer__pages__item">
-                            <a href="#">Helps</a>
+                            {/* <a href="#">Helps</a> */}
+                            <p>Helps</p>
                             <ul className="footer__pages__subitems">
-                                <li className="footer__pages__subitem"><a href="#">Contact</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Faqs</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Terms & Condition</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Privacy Policy</a></li>
+                                <li className="footer__pages__subitem"><Link to="/contacts">Contact</Link></li>
+                                <li className="footer__pages__subitem"><Link to="/faqs">Faqs</Link></li>
+                                <li className="footer__pages__subitem"><Link to="/termsandconditions">Terms & Condition</Link></li>
+                                <li className="footer__pages__subitem"><Link to="/privacypolicy">Privacy Policy</Link></li>
                             </ul>
                         </li>
                         <li className="footer__pages__item">
-                            <a href="#">Proxy</a>
+                            {/* <a href="#">Proxy</a> */}
+                            <p>Proxy</p>
                             <ul className="footer__pages__subitems">
-                                <li className="footer__pages__subitem"><a href="#">About</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Shop</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Product</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Track Order</a></li>
+                                <li className="footer__pages__subitem"><Link to="/staff">About</Link></li>
+                                <li className="footer__pages__subitem"><Link to="/catalog">Shop</Link></li>
+                                <li className="footer__pages__subitem"><Link to="/superproduct">Super Product</Link></li>
+                                <li className="footer__pages__subitem"><Link to="/tracking">Track Order</Link></li>
                             </ul>
                         </li>
                         <li className="footer__pages__item">
-                            <a href="#">Categories</a>
+                            {/* <a href="#">Categories</a> */}
+                            <p>Categories</p>
                             <ul className="footer__pages__subitems">
-                                <li className="footer__pages__subitem"><a href="#">Fruit & Vegetables</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Meat & Fish</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Bread & Bakery</a></li>
-                                <li className="footer__pages__subitem"><a href="#">Beauty & Health</a></li>
+                                <li className="footer__pages__subitem"><Link to="#">Fruit & Vegetables</Link></li>
+                                <li className="footer__pages__subitem"><Link to="#">Meat & Fish</Link></li>
+                                <li className="footer__pages__subitem"><Link to="#">Bread & Bakery</Link></li>
+                                <li className="footer__pages__subitem"><Link to="#">Beauty & Health</Link></li>
                             </ul>
                         </li>
                     </ul>
@@ -80,11 +85,11 @@ export const Footer = () => {
                 <div className="container">
                     <p className="copyright__text">Ecobazar eCommerce &copy; 2021. All Rights Reserved</p>
                     <div className="payment__icons">
-                        <div className="applepay__ico"><a href="#"></a></div>
-                        <div className="visa__ico"><a href="#"></a></div>
-                        <div className="discover__ico"><a href="#"></a></div>
-                        <div className="mastercard__ico"><a href="#"></a></div>
-                        <div className="securepayment__ico"><a href="#"></a></div>
+                        <div className="applepay__ico"><Link to="https://www.apple.com/apple-pay/" target='_blank'></Link></div>
+                        <div className="visa__ico"><Link to="https://usa.visa.com/" target='_blank'></Link></div>
+                        <div className="discover__ico"><Link to="https://www.discover.com/" target='_blank'></Link></div>
+                        <div className="mastercard__ico"><Link to="https://www.mastercard.us/en-us.html" target='_blank'></Link></div>
+                        <div className="securepayment__ico"><Link to="https://www.secure-payment-services.com/" target='_blank'></Link></div>
                     </div>
                 </div>
             </div>

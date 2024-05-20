@@ -217,7 +217,6 @@ p {
 
 .footer__pages .footer__info {
     display: flex;
-    align-items: center;
     gap: 16px;
 }
 
@@ -327,7 +326,7 @@ p {
 
 .footer__copyright .payment__icons a:hover {
     border-radius: 5.29px;
-    border: 1.32px solid var(--grey-footer2);
+    border: 1.32px solid var(--gray-8);
 }
 
 .footer__copyright .applepay__ico,

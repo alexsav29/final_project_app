@@ -1,5 +1,12 @@
+import { ReactNode } from 'react'
 import './Main.css'
 
-export const Main = () => {
-    return <h2>Main</h2>
+type MainProps = {
+    children: ReactNode;
+}
+
+export const Main = ({children}: MainProps) => {
+    return <>
+        {children}
+    </>
 }

@@ -1,6 +1,14 @@
+import { Link, NavLink } from 'react-router-dom'
 import './Header.css'
+import { Badge } from 'antd'
+import { catalogStore } from '../../../../modules/catalog/components/CatalogList/stores/CatalogListStore'
+import { observer } from 'mobx-react-lite'
+import { cartStore } from '../../../../common/stores/CartStore'
 
-export const Header = () => {
+export const Header = observer(() => {
+    const { countWishList } = catalogStore;
+    const { cartCount, totalPrice } = cartStore;
+
     return <>
         <header className="header">
             
@@ -18,9 +26,9 @@ export const Header = () => {
                                 <div className="currency">USD</div>
                             </div>    
                             <div className="auth">
-                                <p className="sign_in">Sign In</p>
+                                <p className="sign_in"><Link to="/sign/signin">Sign In</Link></p>
                                 <p className="slash">/</p>
-                                <p className="sign_up">Sign Up</p>
+                                <p className="sign_up"><Link to="/sign/signup">Sign Up</Link></p>
                             </div>
                         </div>
                     </div>
@@ -28,7 +36,7 @@ export const Header = () => {
                 <div className="header__middle">
                     <div className="container">
                         <div className="logo">
-                            <a href="#"></a>
+                            <Link to="/"></Link>
                         </div>
                         <div className="search">
                             <div className="search__container">
@@ -39,15 +47,18 @@ export const Header = () => {
                         </div>
                         <div className="order__container">
                             <div className="wishlist">
-                                <div className="wishlist__wrapper"></div>
+                                <Link to='/wishlist'><div className="wishlist__wrapper"><Badge count={countWishList}></Badge></div></Link>
                             </div>
                             <div className="cart">
-                                <div className="cart__ico">
-                                    <div className="cart__ico__badge">2</div>
-                                </div>
+                                <Link to="/cart">
+                                    <div className="cart__ico">
+                                        {/* <div className="cart__ico__badge">2</div> */}
+                                        <Badge color='#2C742F' count={cartCount}></Badge>
+                                    </div>
+                                </Link>
                                 <div className="cart__info">
                                     <div className="cart__info__text">Shopping cart:</div>
-                                    <div className="cart__info__total_price">$57.00</div>
+                                    <div className="cart__info__total_price">${totalPrice}</div>
                                 </div>
                             </div>
                         </div>
@@ -58,12 +69,14 @@ export const Header = () => {
                         <div className="header__nav">
                             <nav className="nav">
                                 <ul className='nav__items'>
-                                    <li className='nav__item'><a className='active' href="#">Home</a></li>
-                                    <li className='nav__item'><a href="#">Shop</a></li>
-                                    <li className='nav__item'><a href="#">Pages</a></li>
-                                    <li className='nav__item'><a href="#">Blog</a></li>
-                                    <li className='nav__item'><a href="#">About Us</a></li>
-                                    <li className='nav__item'><a href="#">Contact Us</a></li>
+                                    <li className='nav__item'><NavLink to="/">Home</NavLink></li>
+                                    <li className='nav__item'><NavLink to="/catalog">Shop</NavLink></li>
+                                    <li className='nav__item'><NavLink to="">Pages</NavLink></li>
+                                    <li className='nav__item'><NavLink to="/post">Blog</NavLink></li>
+                                    <li className='nav__item'><NavLink to="/comments">Feedback</NavLink></li>
+                                    <li className='nav__item'><NavLink to="/offers">News</NavLink></li>
+                                    <li className='nav__item'><NavLink to="/staff">About Us</NavLink></li>
+                                    <li className='nav__item'><NavLink to="/contacts">Contact Us</NavLink></li>
                                 </ul>
                             </nav>
                         </div>
@@ -78,4 +91,4 @@ export const Header = () => {
 
         </header>
     </>
-}
+})

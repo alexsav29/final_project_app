@@ -193,6 +193,26 @@ a {
     cursor: pointer;
 }
 
+.wishlist__wrapper .ant-badge,
+.cart__ico .ant-badge  {
+    top: -7px;
+    right: -15px;
+    border-radius: 50%;
+}
+
+/*
+.wishlist__wrapper .ant-badge-count {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+.ant-scroll-number {
+    text-align: center;
+} */
+
 .header__middle .cart {
     display: flex;
     align-items: center;
@@ -282,9 +302,9 @@ a {
     color: var(--white);
 }
 
-.nav .nav__item a.active::after {
+/* .nav .nav__item a.active::after {
     content: url('../../../../../public/icon/Navigation1/arrow_active_nav_ico.png');
-}
+} */
 
 .header__bot .container {
     display: flex;

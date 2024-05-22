@@ -42,7 +42,7 @@ export const CatalogListItem = observer(({catalogItem}: CatalogListItemProps) =>
             </div>
             <div className="product__info__right">
                 <div onClick={handleAddToCart} className="add__to-cart__btn"></div>
-                <WishListItem productId={catalogItem.id} wishState={wishListState} />
+                <WishListItem product={catalogItem} />
             </div>
         </div>
     </div>

@@ -11,13 +11,13 @@ export const CatalogList = observer(() => {
 
     useEffect(() => {
         loadingCategoriesData();
-        console.log(categoriesState);
+        // console.log(categoriesState);
     }, []);
 
     useEffect(() => {
         if (allCategories) {
             loadingProductData();
-            console.log(catalogListDataState);
+            // console.log(catalogListDataState);
         }
     }, [allCategories])
 

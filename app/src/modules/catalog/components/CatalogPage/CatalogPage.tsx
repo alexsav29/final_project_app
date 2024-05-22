@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { CatalogPageStore } from "./stores/CatalogPageStore";
 import { cartStore } from "../../../../common/stores/CartStore";
-import { catalogStore } from "../CatalogList/stores/CatalogListStore";
+// import { catalogStore } from "../CatalogList/stores/CatalogListStore";
 import { Image, Rate } from "antd";
 import { v4 as uuidv4 } from 'uuid';
 import { WishListItem } from "../../../wishlist/components/WishListItem";
@@ -19,9 +19,9 @@ export const CatalogPage = observer(() => {
     
     
     
-    const productRating: number = productDataState && +productDataState?.ProductRating.map((rate) => rate.ProductRating);
-    const productCommentsCount: number = productDataState && +productDataState.ProductRating.map((rateItem) => rateItem.ProductRatingCount)
-    const wishListState: boolean = productDataState && productDataState.isFavourite;
+    const productRating: number | undefined = productDataState && +productDataState?.ProductRating.map((rate) => rate.ProductRating);
+    const productCommentsCount: number | undefined = productDataState && +productDataState.ProductRating.map((rateItem) => rateItem.ProductRatingCount)
+    const wishListState: boolean | undefined = productDataState && productDataState.isFavourite;
     console.log(wishListState);
    
     
@@ -33,7 +33,7 @@ export const CatalogPage = observer(() => {
     }, [productId]);
 
     const handleAddToCart = () => {
-        addToCart(productDataState);
+        addToCart(productDataState!);
     };
 
     return <>
@@ -59,7 +59,7 @@ export const CatalogPage = observer(() => {
             </div>
             <div className="product__buttons">
                 <div onClick={handleAddToCart} className="add__to-cart__btn"></div>
-                <WishListItem productId={productDataState.id} wishState={wishListState} />
+                <WishListItem product={productDataState} />
             </div>
             <div className="product__info">
                 <div className="product__info__left">

@@ -4,9 +4,11 @@ import { Badge } from 'antd'
 import { catalogStore } from '../../../../modules/catalog/components/CatalogList/stores/CatalogListStore'
 import { observer } from 'mobx-react-lite'
 import { cartStore } from '../../../../common/stores/CartStore'
+import { wishListStore } from '../../../../modules/wishlist/stores/WishListStore'
 
 export const Header = observer(() => {
     const { countWishList } = catalogStore;
+    const { wishStoreCount } = wishListStore;
     const { cartCount, totalPrice } = cartStore;
 
     return <>
@@ -47,7 +49,7 @@ export const Header = observer(() => {
                         </div>
                         <div className="order__container">
                             <div className="wishlist">
-                                <Link to='/wishlist'><div className="wishlist__wrapper"><Badge count={countWishList}></Badge></div></Link>
+                                <Link to='/wishlist'><div className="wishlist__wrapper"><Badge count={wishStoreCount}></Badge></div></Link>
                             </div>
                             <div className="cart">
                                 <Link to="/cart">

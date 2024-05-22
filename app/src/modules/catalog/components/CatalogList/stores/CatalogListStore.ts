@@ -4,6 +4,7 @@ import { Product } from "../../../../../common/models/Product";
 
 class CatalogListStore {
     catalogListDataState: Product [] | undefined = undefined;
+    wishListState: Product [] = [];
     categoriesState: string [] | undefined = undefined;
     awaiting: boolean = false;
 
@@ -12,19 +13,24 @@ class CatalogListStore {
     }
 
     get countWishList() {
-        // return this.catalogListDataState?.reduce((acc, item) => {
-        //     if (item.isFavourite) {
-        //         return acc + 1;
-        //     }
-        // }, 0)
-
-        let count = 0;
-        this.catalogListDataState?.forEach((item) => {
+        return this.catalogListDataState?.reduce((acc, item) => {
             if (item.isFavourite) {
-                count += 1;
+                acc + 1;
             }
-        })
-        return count;
+            return acc;
+        }, 0)
+
+        // let count = 0;
+        // this.catalogListDataState?.forEach((item) => {
+        //     if (item.isFavourite) {
+        //         count += 1;
+        //     }
+        // })
+        // return count;
+    }
+
+    get wishStoreCount() {
+        return this.wishListState.length;
     }
 
     constructor() {
@@ -64,7 +70,32 @@ class CatalogListStore {
         }
     };
 
+    toggleToWishList = (wishProduct: Product) => {
+        if (this.catalogListDataState) {
+
+            const index = this.wishListState && this.wishListState.findIndex((product) => wishProduct.id === product.id);
     
+            if (index === -1) {
+                this.wishListState.push(wishProduct);
+                this.catalogListDataState.map((product) => {
+                    if (product.id === wishProduct.id) {
+                        product.isFavourite = true;
+                    }
+                })
+            } else {
+                this.wishListState = this.wishListState.filter((_, ind) => ind !== index);
+                this.catalogListDataState.map((product) => {
+                    if (product.id === wishProduct.id) {
+                        product.isFavourite = false;
+                    }
+                })
+            };
+    
+            // console.log(wishProduct.isFavourite);
+            // console.log(this.catalogListDataState);
+            // console.log(this.wishListState);
+        };
+        }
 }
 
 export const catalogStore = new CatalogListStore();

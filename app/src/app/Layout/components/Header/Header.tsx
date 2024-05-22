@@ -8,7 +8,8 @@ import { wishListStore } from '../../../../modules/wishlist/stores/WishListStore
 
 export const Header = observer(() => {
     const { countWishList } = catalogStore;
-    const { wishStoreCount } = wishListStore;
+    const { wishStoreCount } = catalogStore;
+    // const { wishStoreCount } = wishListStore;
     const { cartCount, totalPrice } = cartStore;
 
     return <>

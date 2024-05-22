@@ -26,7 +26,7 @@ export const CatalogListItem = observer(({catalogItem}: CatalogListItemProps) =>
     return <>
     <div className="product">
         <div className="product__img">
-            <Image className="product__image" src={catalogItem.Image} />
+            <Image width={200} className="product__image" src={catalogItem.Image} />
         </div>
         <div className="product__info">
             <div className="product__info__left">

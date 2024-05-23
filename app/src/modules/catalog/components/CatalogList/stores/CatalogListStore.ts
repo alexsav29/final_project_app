@@ -3,7 +3,7 @@ import { makeAutoObservable, runInAction } from "mobx";
 import { Product } from "../../../../../common/models/Product";
 
 class CatalogListStore {
-    catalogListDataState: Product [] | undefined = undefined;
+    catalogListDataState: Product [] | [] = [];
     wishListState: Product [] = [];
     categoriesState: string [] | undefined = undefined;
     awaiting: boolean = false;
@@ -44,7 +44,7 @@ class CatalogListStore {
                 const data: string [] = await response.json();
                 runInAction(() => {
                     this.categoriesState = data;
-                })
+                });
             }
         } catch (error) {
             console.log(error);
@@ -77,14 +77,14 @@ class CatalogListStore {
     
             if (index === -1) {
                 this.wishListState.push(wishProduct);
-                this.catalogListDataState.map((product) => {
+                this.catalogListDataState = this.catalogListDataState.map((product) => {
                     if (product.id === wishProduct.id) {
                         product.isFavourite = true;
                     }
                 })
             } else {
                 this.wishListState = this.wishListState.filter((_, ind) => ind !== index);
-                this.catalogListDataState.map((product) => {
+                this.catalogListDataState = this.catalogListDataState.map((product) => {
                     if (product.id === wishProduct.id) {
                         product.isFavourite = false;
                     }

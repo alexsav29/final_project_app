@@ -1,0 +1,29 @@
+.posts {
+    margin-bottom: 50px;
+}
+
+.post__header__block {
+    font-size: 48px;
+    margin: 40px;
+}
+
+.post__item {
+    padding: 40px;
+}
+
+.post__item:nth-child(odd) {
+    background-color: #84D18755;
+}
+
+.post__item:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+.post__title {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.post__image {
+    width: 200px;
+}

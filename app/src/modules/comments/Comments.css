@@ -1,0 +1,25 @@
+.comments__page__header {
+    font-size: 48px;
+    padding: 50px;
+}
+
+.comment__item {
+    background-color: #DAE6DA;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.comment__title {
+    color: black;
+    font-weight: bold;
+}
+
+.coment__body {
+    margin: 10px 0 20px 0;
+}
+
+.comment__email {
+    text-decoration: underline;
+    font-style: italic;
+}

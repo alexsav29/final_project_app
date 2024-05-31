@@ -22,12 +22,15 @@ export const PostList = observer(() => {
         display: "block",
         margin: "100px auto",
         borderColor: "red",
-    };
+        position: "absolute",
+        zIndex: 1,
+      };
 
     return <>
         <h2 className="post__header__block">Наш блог</h2>
 
         <DotLoader
+            className="loader"
             color={'#00B307'}
             loading={awaiting}
             cssOverride={override}

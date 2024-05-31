@@ -10,3 +10,14 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+html,
+body,
+#root {
+    height: 100vh;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}

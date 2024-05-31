@@ -62,7 +62,7 @@ export const Footer = () => {
                             {/* <a href="#">Proxy</a> */}
                             <p>Proxy</p>
                             <ul className="footer__pages__subitems">
-                                <li className="footer__pages__subitem"><Link to="/staff">About</Link></li>
+                                <li className="footer__pages__subitem"><Link to="/aboutus">About</Link></li>
                                 <li className="footer__pages__subitem"><Link to="/catalog">Shop</Link></li>
                                 <li className="footer__pages__subitem"><Link to="/superproduct">Super Product</Link></li>
                                 <li className="footer__pages__subitem"><Link to="/tracking">Track Order</Link></li>
@@ -83,7 +83,7 @@ export const Footer = () => {
             </div>
             <div className="footer__copyright">
                 <div className="container">
-                    <p className="copyright__text">Ecobazar eCommerce &copy; 2021. All Rights Reserved</p>
+                    <p className="copyright__text">Ecobazar eCommerce &copy; 2024. All Rights Reserved</p>
                     <div className="payment__icons">
                         <div className="applepay__ico"><Link to="https://www.apple.com/apple-pay/" target='_blank'></Link></div>
                         <div className="visa__ico"><Link to="https://usa.visa.com/" target='_blank'></Link></div>

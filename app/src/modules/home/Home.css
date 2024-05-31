@@ -1,0 +1,29 @@
+.promo__block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo__block__2 {
+    display: flex;
+    justify-content: center;
+}
+
+.promo__banner__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.promo1 {
+    max-width: 835px;
+}
+
+.promo2,
+.promo3 {
+    max-width: 415px;
+}
+
+.promo4 {
+    width: 1220px;
+}

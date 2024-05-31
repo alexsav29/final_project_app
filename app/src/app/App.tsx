@@ -4,10 +4,9 @@ import { Layout } from './Layout'
 import { Home } from '../modules/home'
 import { Cart } from '../modules/cart'
 import { Comments } from '../modules/comments'
-import { Offers } from '../modules/offers'
 import { Order } from '../modules/order'
 import { Result } from '../modules/result'
-import { Staff } from '../modules/staff'
+import { AboutUs } from '../modules/aboutus'
 import { WishList } from '../modules/wishlist'
 import { Catalog } from '../modules/catalog'
 import { Post } from '../modules/post'
@@ -20,6 +19,7 @@ import { Terms } from '../modules/terms'
 import { Privacy } from '../modules/privacy'
 import { SuperProduct } from '../modules/superProduct'
 import { Tracking } from '../modules/tracking'
+import { News } from '../modules/news'
 
 export const App = () => {
     return <>
@@ -30,10 +30,9 @@ export const App = () => {
                 <Route path='/catalog/*' element={<Catalog />} />
                 <Route path='/post/*' element={<Post />} />
                 <Route path='/comments' element={<Comments />} />
-                <Route path='/offers' element={<Offers />} />
-                <Route path='/order' element={<Order />} />
+                <Route path='/news' element={<News />} />
                 <Route path='/result' element={<Result />} />
-                <Route path='/staff' element={<Staff />} />
+                <Route path='/aboutus' element={<AboutUs />} />
                 <Route path='/wishlist' element={<WishList />} />
                 <Route path='/contacts' element={<Contacts />} />
                 <Route path='/sign/*' element={<Sign />} />
@@ -44,6 +43,7 @@ export const App = () => {
                 <Route path='/privacypolicy' element={<Privacy />} />
                 <Route path='/superproduct' element={<SuperProduct />} />
                 <Route path='/tracking' element={<Tracking />} />
+                <Route path='/order' element={<Order />} />
             </Route>
         </Routes>
 

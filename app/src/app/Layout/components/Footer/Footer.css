@@ -176,7 +176,8 @@ p {
 
 .footer__pages .container {
     display: flex;
-    gap: 112px;
+    justify-content: space-between;
+    /* gap: 112px; */
 }
 
 .footer__pages .footer__pages__info {
@@ -325,3 +326,5 @@ p {
     height: 32px;
     background: url('../../../../../public/icon/Footer/payment/securepayment_ico.png') no-repeat center;
 }
+
+

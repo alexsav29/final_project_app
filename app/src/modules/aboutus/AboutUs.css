@@ -1,0 +1,73 @@
+.loader {
+    left: calc(50% - 75px);
+}
+
+.aboutus__info__header {
+    font-size: 48px;
+}
+
+.aboutus__image {
+    border-radius: 30px;
+    margin: 30px 0;
+}
+
+.aboutus__info__item {
+    color: #000;
+    font-size: 20px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.aboutus__info__item:nth-child(3),
+.aboutus__info__item:last-child {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.staff__item {
+    display: flex;
+    gap: 30px;
+
+    background-image: url('../../../public/icon/Staff/staff__card__bg_3.jpg');
+    padding: 20px;
+    margin: 40px 0;
+
+    border-radius: 20px;
+    box-shadow: 0 0 20px #cecece;
+}
+
+.staff__img__content {
+    width: 300px;
+    border-radius: 15px;
+}
+
+.staff__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.staff__name,
+.staff__rank,
+.staff__description {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content
+}
+
+.staff__name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.staff__rank {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.staff__description {
+    text-align: justify;
+}

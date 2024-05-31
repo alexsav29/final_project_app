@@ -1,0 +1,30 @@
+p {
+    color: #000;
+}
+
+.bold {
+    font-weight: bold;
+}
+.privacy {
+    text-align: justify;
+}
+
+.privacy__header {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.privacy__item__header {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.privacy__item__description {
+    margin: 20px 0;
+    text-indent: 40px;
+}
+
+.privacy__list__items {
+    list-style-position: inside;
+}

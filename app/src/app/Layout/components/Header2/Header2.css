@@ -78,7 +78,7 @@ a {
     display: inline-block;
     width: 16px;
     height: 19px;
-    background: url('../../../../../public/icon/Navigation1/map_pin_ico.png') no-repeat;
+    background: url('../../../../../public/icon/Navigation1/map_pin_ico.svg') no-repeat;
 }
 
 .header__top__right {

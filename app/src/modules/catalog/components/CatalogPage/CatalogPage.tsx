@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { CatalogPageStore } from "./stores/CatalogPageStore";
 import { cartStore } from "../../../../common/stores/CartStore";
@@ -8,23 +8,18 @@ import { v4 as uuidv4 } from 'uuid';
 import { WishListItem } from "../../../wishlist/components/WishListItem";
 import { observer } from "mobx-react-lite";
 import './CatalogPage.css'
+import { DotLoader } from "react-spinners";
 
 export const CatalogPage = observer(() => {
     const [store] = useState(() => new CatalogPageStore());
-    const { loadProduct, productDataState } = store;
+    const { loadProduct, productDataState, awaiting } = store;
     const { productId } = useParams();
     const { addToCart } = cartStore;
-
-    
-    
-    
     
     const productRating: number | undefined = productDataState && +productDataState?.ProductRating.map((rate) => rate.ProductRating);
     const productCommentsCount: number | undefined = productDataState && +productDataState.ProductRating.map((rateItem) => rateItem.ProductRatingCount)
     const wishListState: boolean | undefined = productDataState && productDataState.isFavourite;
     console.log(wishListState);
-   
-    
 
     useEffect(() => {
         if (productId) {
@@ -36,7 +31,25 @@ export const CatalogPage = observer(() => {
         addToCart(productDataState!);
     };
 
+    const override: CSSProperties = {
+        display: "block",
+        margin: "100px auto",
+        borderColor: "red",
+        position: "absolute",
+        zIndex: 1,
+    };
+
     return <>
+        <DotLoader
+            className="loader"
+            color={'#00B307'}
+            loading={awaiting}
+            cssOverride={override}
+            size={150}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+        />
+
         {productDataState && 
         <div className="product__item">
             <p className="product__item__title">{productDataState.ProductName}</p>
@@ -63,7 +76,6 @@ export const CatalogPage = observer(() => {
             </div>
             <div className="product__info">
                 <div className="product__info__left">
-                    <p className="product__title">{productDataState.ProductName}</p>
                     <div className="product__price">
                         {productDataState.Price.map((price) => <p className="product__price__item" key={uuidv4()}>{price.Price}</p>)}
                         <p className="product__price__currency">&#36;</p>

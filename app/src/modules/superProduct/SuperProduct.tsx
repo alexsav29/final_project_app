@@ -1,3 +1,3 @@
 export const SuperProduct = () => {
-    return <h2>SuperProduct</h2>
+    return <h2>Следите за нашими акционными товарами в этом разделе</h2>
 }

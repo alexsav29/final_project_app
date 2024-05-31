@@ -1,3 +1,7 @@
+.loader {
+    left: calc(50% - 75px);
+}
+
 .product__item__title {
     color: #000;
     font-size: 36px;
@@ -13,8 +17,11 @@
 }
 
 .product__images__list {
-    border: 2px solid #00B307;
+    /* border: 2px solid #00B307; */
     padding: 20px;
+
+    display: flex;
+    gap: 20px;
 }
 
 .ant-image {
@@ -24,10 +31,18 @@
     width: 33.33%;
 }
 
+.product__description {
+    text-align: justify;
+}
+
 .product__buttons {
     display: flex;
 }
 
 .product__buttons * {
     margin: 20px 5px;
+}
+
+.product__info {
+    margin-bottom: 50px;
 }

@@ -51,10 +51,13 @@ class CatalogListStore {
         }
     }
 
-    loadingProductData = async () => {
+    loadingProductData = async (category?: string) => {
+        const url = category && category !== 'Все категории' ?
+            `http://localhost:3001/products?category=${category}` : 'http://localhost:3001/products';
+
         try {
             this.awaiting = true;
-            const response = await fetch('http://localhost:3001/products');
+            const response = await fetch(url);
             if (response.status === 200) {
                 const data: Product [] = await response.json();
                 runInAction(() => {
@@ -77,17 +80,19 @@ class CatalogListStore {
     
             if (index === -1) {
                 this.wishListState.push(wishProduct);
-                this.catalogListDataState = this.catalogListDataState.map((product) => {
+                this.catalogListDataState.map((product) => {
                     if (product.id === wishProduct.id) {
-                        product.isFavourite = true;
-                    }
+                        product.isFavourite = !product.isFavourite;
+                    };
+                    return product;
                 })
             } else {
                 this.wishListState = this.wishListState.filter((_, ind) => ind !== index);
                 this.catalogListDataState = this.catalogListDataState.map((product) => {
                     if (product.id === wishProduct.id) {
-                        product.isFavourite = false;
+                        product.isFavourite = !product.isFavourite;
                     }
+                    return product;
                 })
             };
     

@@ -45,7 +45,9 @@ export const PostPage = observer(() => {
         display: "block",
         margin: "100px auto",
         borderColor: "red",
-    };
+        position: "absolute",
+        zIndex: 1,
+      };
 
     // const colors1 = ['#6253E1', '#04BEFE'];
     // const colors2 = ['#fc6076', '#ff9a44', '#ef9d43', '#e75516'];
@@ -60,6 +62,7 @@ export const PostPage = observer(() => {
     return <>
         <div className="post">
             <DotLoader
+                className="loader"
                 color={'#00B307'}
                 loading={awaiting}
                 cssOverride={override}
@@ -69,7 +72,7 @@ export const PostPage = observer(() => {
             />
 
             <h2 className="post__item__title">{postPageData?.title}</h2>
-            <img src={postPageData?.image} alt="Post Image" className="post__item__image" />
+            <img src={postPageData?.image} className="post__item__image" />
             <p className="post__item__body">{postPageData?.body}</p>
         </div>
 

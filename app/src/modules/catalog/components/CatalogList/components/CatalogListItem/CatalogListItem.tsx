@@ -30,7 +30,7 @@ export const CatalogListItem = observer(({catalogItem}: CatalogListItemProps) =>
         </div>
         <div className="product__info">
             <div className="product__info__left">
-                <p className="product__title"><Link to={catalogItem.id.toString()}>{catalogItem.ProductName}</Link></p>
+                <p className="product__title"><Link to={`/catalog/${catalogItem.id.toString()}`}>{catalogItem.ProductName}</Link></p>
                 <div className="product__price">
                     {catalogItem.Price.map((price) => <p className="product__price__item" key={uuidv4()}>{price.Price}</p>)}
                     <p className="product__price__currency">&#36;</p>

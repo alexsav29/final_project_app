@@ -3,11 +3,22 @@
     padding: 50px;
 }
 
+.comments__count {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: end;
+}
+
 .comment__item {
     background-color: #DAE6DA;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 30px;
+}
+
+.comment__header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .comment__title {
@@ -17,9 +28,11 @@
 
 .coment__body {
     margin: 10px 0 20px 0;
+    text-align: justify;
 }
 
 .comment__email {
     text-decoration: underline;
     font-style: italic;
+    text-align: center;
 }

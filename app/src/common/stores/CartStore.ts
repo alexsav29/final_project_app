@@ -7,14 +7,18 @@ class CartStore {
 
     get cartCount() {
         return this.cartState.reduce((acc, product) => acc + product.count, 0);
-    }
+    };
 
     get totalPrice() {
         return this.cartState.reduce((acc, productInCart) => {
             const price: number = +productInCart.Price.map((price) => price.Price);
             return acc + (productInCart.count*price)
         }, 0).toFixed(2);
-    }
+    };
+
+    get isCartEmpty() {
+        return this.cartCount === 0;
+    };
 
     constructor() {
         makeAutoObservable(this);
@@ -37,7 +41,6 @@ class CartStore {
     clearCart = () => {
         this.cartState = [];
     }
-
 }
 
 export const cartStore = new CartStore();

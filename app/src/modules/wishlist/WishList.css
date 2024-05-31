@@ -1,0 +1,9 @@
+.wishlist__empty {
+    font-size: 36px;
+}
+
+.wish__list__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

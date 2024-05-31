@@ -1,0 +1,42 @@
+.news__header {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.news__count {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.news__item {
+    padding: 30px;
+    margin-bottom: 70px;
+    box-shadow: 0 0 30px #cece;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.news__title,
+.news__image {
+    margin-bottom: 20px;
+}
+
+.news__title {
+    color: #000;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.news__image {
+    max-width: 1280px;
+}
+
+.news__description {
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: justify;
+}

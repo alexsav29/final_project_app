@@ -25,6 +25,8 @@ export const CatalogList = observer(() => {
         display: "block",
         margin: "100px auto",
         borderColor: "red",
+        position: "absolute",
+        zIndex: 1,
       };
 
     return <>
@@ -33,6 +35,7 @@ export const CatalogList = observer(() => {
         </div>
 
         <DotLoader
+            className="loader"
             color={'#00B307'}
             loading={awaiting}
             cssOverride={override}
@@ -45,6 +48,6 @@ export const CatalogList = observer(() => {
             {catalogListDataState && catalogListDataState.length > 0 && catalogListDataState.map((product) => 
                 <CatalogListItem key={product.id} catalogItem={product} />
             )}
-         </div>
+        </div>
     </>
 })

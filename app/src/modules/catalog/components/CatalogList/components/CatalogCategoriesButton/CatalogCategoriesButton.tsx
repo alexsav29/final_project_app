@@ -1,10 +1,17 @@
 import { Button } from "antd"
 import './CatalogCategoriesButton.css'
+import { catalogStore } from "../../stores/CatalogListStore";
 
 type CatalogCategoriesButtonProps = {
     catalogCategory: string;
 }
 
 export const CatalogCategoriesButton = ({catalogCategory}: CatalogCategoriesButtonProps) => {
-    return  <Button className="category">{catalogCategory}</Button>
+    const { loadingProductData } = catalogStore;
+
+    const handleCategoryClick = (category: string) => {
+        loadingProductData(category)
+    }
+
+    return  <Button onClick={() => handleCategoryClick(catalogCategory)} className="category">{catalogCategory}</Button>
 }

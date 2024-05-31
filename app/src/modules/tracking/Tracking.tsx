@@ -1,3 +1,3 @@
 export const Tracking = () => {
-    return <h2>Tracking</h2>
+    return <h2>В этом разделе вы можете отслеживать ваши заказы</h2>
 }

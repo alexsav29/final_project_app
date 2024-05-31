@@ -559,8 +559,6 @@
     }
 
     /* Main (Faq) */
-    .faq__items {
-    }
     
     .faq__item {
         margin: 0 auto;
@@ -663,6 +661,8 @@
 
     .cart__item__description__footer {
         flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .product__title {
@@ -887,6 +887,30 @@
         max-width: 240px;
     }
 
+    /* Main (Home) */
+
+    .promo1, .promo2, .promo3 {
+        max-width: 250px;
+    }
+
+    /* Main (Catalog) */
+    .product__info {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    .product__info__right {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .product {
+        width: 210px;
+    }
+
+    
+
     /* Footer */
     .subscribe__text {
         display: flex;
@@ -921,5 +945,38 @@
 
     .footer__pages .footer__info {
         gap: 0px;
+    }
+
+    /* Main (Blog) */
+    .post__title {
+        width: 200px;
+    }
+
+    /* Main (About Us) */
+    .aboutus__image {
+        width: 250px;
+    }
+
+    .staff__img__content {
+        width: 220px;
+    }
+
+    .staff__name,
+    .staff__rank {
+        text-align: center;
+    }
+
+    /* Main (Faw) */
+    .faq__img {
+        max-width: 250px;
+    }
+
+    .faq__item {
+        width: 230px;
+        padding: 30px 10px;
+    }
+
+    .faq__answer {
+        width: 200px;
     }
 }
